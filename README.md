@@ -63,29 +63,6 @@ SMARTSUPPORT/
 ---
 
 ## 🔐 Configuration
-
----
-
-## ▶️ Run Locally
-
-### 1️⃣ Start MySQL and create database
-
-```sql
-CREATE DATABASE smartsupport;
-```
-
-### 2️⃣ Run backend with local profile
-
-```bash
-mvn spring-boot:run -Dspring-boot.run.profiles=local
-```
-
-Backend will start at:
-
-```
-http://localhost:8080
-```
-
 ---
 
 ## ☁️ Deployment
