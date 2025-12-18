@@ -64,34 +64,6 @@ SMARTSUPPORT/
 
 ## 🔐 Configuration
 
-### `application.properties` (Committed to GitHub)
-
-All sensitive values are injected using **environment variables**:
-
-```properties
-spring.datasource.url=${DB_URL}
-spring.datasource.username=${DB_USERNAME}
-spring.datasource.password=${DB_PASSWORD}
-
-jwt.secret=${JWT_SECRET}
-jwt.expiration=86400000
-
-spring.web.cors.allowed-origins=${FRONTEND_URL}
-```
-
----
-
-### `application-local.properties` (Local Only – NOT pushed)
-
-```properties
-DB_URL=jdbc:mysql://localhost:3306/smartsupport
-DB_USERNAME=root
-DB_PASSWORD=your_password
-
-JWT_SECRET=local-secret-key
-FRONTEND_URL=http://localhost:5173
-```
-
 ---
 
 ## ▶️ Run Locally
@@ -112,26 +84,6 @@ Backend will start at:
 
 ```
 http://localhost:8080
-```
-
----
-
-## 🐳 Docker (Used for Deployment)
-
-### Build JAR
-
-```bash
-mvn clean package
-```
-
-### Dockerfile
-
-```dockerfile
-FROM openjdk:17-jdk-slim
-WORKDIR /app
-COPY target/*.jar app.jar
-EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
 
 ---
