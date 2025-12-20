@@ -1,37 +1,49 @@
-# SmartSupport – Backend (Spring Boot)
+# **SmartSupport – Backend (Spring Boot)**
 
-SmartSupport is a **customer support / helpdesk backend system** built using **Java Spring Boot**. It provides secure, role-based APIs for managing users, support tickets, conversations, and authentication.
+SmartSupport is a **scalable customer support / helpdesk backend system** built using **Java Spring Boot**.
+It provides **secure, role-based REST APIs** for managing users, support tickets, conversations, and authentication.
 
-This repository contains the **backend service only**. The frontend is built separately using **React**.
+This repository contains the **backend service only**.
+The **frontend is developed separately using React**.
+
+---
+
+## 🌐 Frontend Links
+
+* **Frontend GitHub Repository**
+  [https://github.com/tushar0945/SmartSupport-Frontend](https://github.com/tushar0945/SmartSupport-Frontend)
+
+* **Frontend Live Demo**
+  [https://smartsupport.netlify.app/](https://smartsupport.netlify.app/)
 
 ---
 
 ## 🚀 Tech Stack
 
-* **Java 17**
-* **Spring Boot**
-* **Spring Security + JWT**
-* **Spring Data JPA (Hibernate)**
-* **MySQL** (local) / Cloud DB (production)
-* **Maven**
-* **Docker** (for deployment)
+* Java 17
+* Spring Boot
+* Spring Security + JWT Authentication
+* Spring Data JPA (Hibernate)
+* MySQL (local) / Cloud Database (production)
+* Maven
+* Docker
 
 ---
 
 ## 🧩 Features
 
-* User authentication using JWT
+* Secure user authentication using JWT
 * Role-based access control
 
   * USER
-  * AGENT
+  * Staff
   * ADMIN
 * Ticket management system
 
-  * Create ticket
-  * Assign ticket
-  * Update ticket status
-* Ticket conversation (replies/messages)
+  * Create support tickets
+  * Assign tickets to agents
+  * Update ticket status (Open, In Progress, Resolved, Closed)
+* Ticket conversation system (messages/replies)
 * Secure REST APIs
 * CORS configuration for frontend integration
 
@@ -53,7 +65,7 @@ SMARTSUPPORT/
 │       │   └── SmartSupportApplication.java
 │       └── resources/
 │           ├── application.properties
-│           └── application-local.properties (local only)
+│           
 ├── pom.xml
 ├── Dockerfile
 ├── .gitignore
@@ -63,19 +75,22 @@ SMARTSUPPORT/
 ---
 
 ## 🔐 Configuration
+
+* Environment-based configuration using `application.properties`
+* Sensitive values managed via environment variables
+
 ---
 
 ## ☁️ Deployment
 
-* Backend deployed on **Render**
-* Database hosted on **cloud MySQL / PostgreSQL**
+* Backend deployed on Render
+* Database hosted on cloud (MySQL)
 * Environment variables configured in Render dashboard
 
 ---
 
 ## 🔒 Security Notes
 
-* No secrets are committed to GitHub
 * JWT-based authentication
 * Role-based API protection
 * CORS restricted to frontend domain
@@ -89,10 +104,6 @@ Backend Developer | Spring Boot | React
 
 ---
 
-## 📌 Status
+## 📌 Project Status
 
 ✅ Backend ready for production deployment
-
----
-
-If you have questions or want to extend this project, feel free to reach out.
